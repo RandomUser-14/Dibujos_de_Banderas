@@ -1,0 +1,126 @@
+import turtle
+
+flag = turtle.Turtle()
+flag.pensize(2)
+flag.speed(3)
+flag.penup()
+flag.goto(-300, 300)
+flag.pendown()
+
+def linea(posicion, distancia):
+    flag.seth(posicion)
+    flag.fd(distancia)
+
+
+#azul
+flag.color("darkblue")
+flag.fillcolor("darkblue")
+flag.begin_fill()
+linea(0, 600)
+linea(270, 300)
+linea(180, 600)
+linea(90, 300)
+flag.end_fill()
+
+#blanco
+flag.penup()
+flag.goto(0, 300)
+flag.color("ghostwhite")
+flag.pensize(80)
+flag.pendown()
+linea(270, 300)
+flag.penup()
+flag.goto(-300, 150)
+flag.pendown()
+linea(0, 600)
+
+flag.penup()
+flag.goto(-300, 0)
+flag.pensize(51)
+flag.pendown()
+linea(27, 700)
+flag.penup()
+flag.goto(300, 0)
+flag.pendown()
+linea(153, 700)
+
+#rojo
+flag.penup()
+flag.color("red3")
+flag.pensize(50)
+flag.goto(-300, 150)
+flag.pendown()
+linea(0, 600)
+flag.penup()
+flag.goto(0, 300)
+flag.pendown()
+linea(270, 300)
+
+#esquina superior izquierda
+flag.pensize(3)
+flag.penup()
+flag.goto(-300, 285)
+flag.pendown()
+flag.fillcolor("red3")
+flag.begin_fill()
+linea(333, 200)
+linea(0, 28)
+linea(153, 230)
+linea(270, 15)
+flag.end_fill()
+
+#esquina inferior derecha
+flag.penup()
+flag.goto(300, 15)
+flag.pendown()
+flag.fillcolor("red3")
+flag.begin_fill()
+linea(153, 200)
+linea(180, 28)
+linea(333, 238)
+linea(90, 15)
+flag.end_fill()
+
+#esquina inferior izquierda
+flag.penup()
+flag.goto(-300, 0)
+flag.pendown()
+flag.fillcolor("red3")
+flag.begin_fill()
+linea(27, 238)
+linea(0, 28)
+linea(207, 238)
+linea(180, 30)
+flag.end_fill()
+
+#esquina superior derecha
+flag.penup()
+flag.goto(300, 300)
+flag.pendown()
+flag.fillcolor("red3")
+flag.begin_fill()
+linea(207, 238)
+linea(180, 28)
+linea(27, 238)
+linea(0, 30)
+flag.end_fill()
+#borrar bordes
+flag.penup()
+flag.pensize(50)
+flag.color("white")
+flag.goto(-300, 325)
+flag.pendown()
+linea(0, 625)
+linea(270, 350)
+linea(180, 650)
+linea(90, 350)
+
+flag.penup()
+flag.goto(0, -150)
+flag.color("black")
+flag.pendown()
+flag.write("REINO UNIDO", False,
+           "center", ("Arial", 50, "bold"))
+
+flag.hideturtle()
+turtle.done()
